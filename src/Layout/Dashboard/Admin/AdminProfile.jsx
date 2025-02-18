@@ -1,7 +1,7 @@
 import React from "react";
 import useAuth from "../../../hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
-import { FaEnvelope, FaPhone, FaUserTag } from "react-icons/fa";
+import { FaEnvelope, FaLocationArrow, FaPhone, FaUserTag } from "react-icons/fa";
 import Loading from "../../../components/Loading";
 import { Helmet } from "react-helmet";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
@@ -73,12 +73,21 @@ const AdminProfile = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex justify-between px-10 flex-wrap">
+              <div className="flex items-center gap-4">
               <FaUserTag className="text-2xl text-yellow-500" />
               <p className="text-lg text-gray-600 capitalize">
-                Role: {currentUser.role || "N/A"}
+                {currentUser.role || "N/A"}
               </p>
+              </div>
+              <div className="flex items-center gap-4">
+              <FaLocationArrow className="text-2xl text-teal-600" />
+              <p className="text-lg text-gray-600 capitalize">
+                {currentUser.adress|| "N/A"}
+              </p>
+              </div>
             </div>
+            
           </div>
         ) : (
           <p className="text-xl text-center text-red-500">

@@ -7,25 +7,28 @@ import { SiGoogleclassroom } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
 import { Helmet } from "react-helmet";
 import Loading from "../../components/Loading";
+import useAuth from "../../hooks/useAuth";
 
 const Dashboard = () => {
-  const [isAdmin, isAdminLoading] = useAdmin();
-  const [isTeacher, isTeacherLoading] = useTeacher();
+  // const [isAdmin, isAdminLoading] = useAdmin();
+  // const [isTeacher, isTeacherLoading] = useTeacher();
 
-  // const isAdmin = true;
-  // const isTeacher = false;
+  const { user } = useAuth();
 
-  if (isAdminLoading || isTeacherLoading) {
-    return <Loading />;
-  }
+  const isAdmin = false;
+  const isTeacher = true;
+
+  // if (isAdminLoading || isTeacherLoading) {
+  //   return <Loading />;
+  // }
 
   return (
-    <div className="flex">
+    <div className="flex px-4">
       <Helmet>
         <meta charSet="utf-8" />
         <title>EduSphere | Dashboard</title>
       </Helmet>
-      <div className="w-3/12 lg:w-2/12 min-h-screen bg-orange-300 p-5">
+      <div className="w-3/12 lg:w-2/12 min-h-screen bg-teal-50 p-5">
         <ul className="flex flex-col gap-5 text-gray-700 font-bold">
           <li>
             <NavLink
@@ -69,6 +72,24 @@ const Dashboard = () => {
           {isAdmin ? (
             <div className="flex flex-col gap-4 text-sm lg:text-xl">
               <div className="divider"></div>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2 rounded-md ${
+                      isActive ? "bg-gray-700 text-white" : ""
+                    }`
+                  }
+                  to={"/dashboard/studentprofile"}
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <img src={user.photoURL} alt="User" className="w-12" />
+                    <div>
+                      <p className="truncate text-sm">{user.displayName}</p>
+                      <p className="truncate text-sm">{user.email}</p>
+                    </div>
+                  </div>
+                </NavLink>
+              </li>
               <li>
                 <NavLink
                   className={({ isActive }) =>
@@ -128,6 +149,24 @@ const Dashboard = () => {
                       isActive ? "bg-gray-700 text-white" : ""
                     }`
                   }
+                  to={"/dashboard/studentprofile"}
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <img src={user.photoURL} alt="User" className="w-12" />
+                    <div>
+                      <p className="truncate text-sm">{user.displayName}</p>
+                      <p className="truncate text-sm">{user.email}</p>
+                    </div>
+                  </div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2 rounded-md ${
+                      isActive ? "bg-gray-700 text-white" : ""
+                    }`
+                  }
                   to={"/dashboard/addclass"}
                 >
                   <SiGoogleclassroom /> Add Class
@@ -161,6 +200,24 @@ const Dashboard = () => {
           ) : (
             <div className="flex flex-col gap-4 text-sm lg:text-xl">
               <div className="divider"></div>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2 rounded-md ${
+                      isActive ? "bg-gray-700 text-white" : ""
+                    }`
+                  }
+                  to={"/dashboard/studentprofile"}
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <img src={user.photoURL} alt="User" className="w-12" />
+                    <div>
+                      <p className="truncate text-sm">{user.displayName}</p>
+                      <p className="truncate text-sm">{user.email}</p>
+                    </div>
+                  </div>
+                </NavLink>
+              </li>
               <li>
                 <NavLink
                   className={({ isActive }) =>
