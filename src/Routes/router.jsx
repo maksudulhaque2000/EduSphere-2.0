@@ -40,9 +40,7 @@ export const router = createBrowserRouter([
       {
         path: "/allclasses/:id",
         element: (
-          <PrivateRouter>
             <DetailsPublic></DetailsPublic>
-          </PrivateRouter>
         ),
       },
       {

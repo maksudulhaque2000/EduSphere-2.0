@@ -10,7 +10,9 @@ const MainLayout = () => {
   return (
     <div>
       {noNavFoot || <NavBar></NavBar>}
+      <div className="px-4">
       <Outlet></Outlet>
+      </div>
       {noNavFoot || <Footer></Footer>}
     </div>
   );

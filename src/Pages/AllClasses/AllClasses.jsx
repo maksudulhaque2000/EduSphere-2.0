@@ -50,12 +50,12 @@ const AllClasses = () => {
   });
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
+    <div className="min-h-screen">
       <Helmet>
         <meta charSet="utf-8" />
         <title>EduSphere | All Classes</title>
       </Helmet>
-      <h3 className="text-center text-gray-800 text-3xl mb-8">All Classes</h3>
+      <h3 className="text-4xl text-center my-2 p-2">All Classes</h3>
 
       <div className="mb-8 flex justify-between items-center">
         <div className="flex items-center w-3/4 ">
@@ -65,15 +65,15 @@ const AllClasses = () => {
               placeholder="Search by title..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pl-10"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 pl-10"
             />
-            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500" />
+            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-600" />
           </div>
         </div>
 
         <button
           onClick={() => setIsAscending(!isAscending)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-800 transition-colors"
         >
           <FaSort />
           Sort by Price ({isAscending ? "Ascending" : "Descending"})
@@ -85,7 +85,7 @@ const AllClasses = () => {
           sortedClasses.map((classItem) => (
             <div
               key={classItem._id}
-              className="w-80 bg-yellow-200 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+              className="w-80 bg-teal-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               <img
                 src={classItem.image}
@@ -93,30 +93,30 @@ const AllClasses = () => {
                 className="w-full h-48 object-cover rounded-t-lg"
               />
               <div className="p-6">
-                <h4 className="text-blue-600 text-2xl font-semibold mb-3">
+                <h4 className="text-teal-700 text-2xl font-semibold mb-3 truncate">
                   {classItem.title || "N/A"}
                 </h4>
-                <p className="text-gray-600 text-lg mb-4">
+                <p className="text-gray-600 text-lg mb-4 truncate">
                   {classItem.description || "N/A"}
                 </p>
-                <p className="text-blue-500 font-bold text-xl mb-3">
+                <p className="text-teal-700 font-bold text-xl mb-3">
                   <FaDollarSign className="inline-block mr-2" />
                   {classItem.price || "N/A"}
                 </p>
-                <p className="text-gray-600 text-lg mb-3">
-                  <FaUserTie className="inline-block mr-2 text-blue-500" />
+                <p className="text-teal-700 text-lg mb-3">
+                  <FaUserTie className="inline-block mr-2 text-teal-700" />
                   {classItem.name || "N/A"}
                 </p>
-                <p className="text-gray-600 text-lg mb-5">
-                  <FaEnvelope className="inline-block mr-2 text-blue-500" />
+                <p className="text-teal-700-600 text-lg mb-5">
+                  <FaEnvelope className="inline-block mr-2 text-teal-700" />
                   {classItem.email || "N/A"}
                 </p>
-                <p className="text-gray-600 text-lg mb-5">
-                  <FaUsers className="inline-block mr-2 text-blue-500" />
+                <p className="text-teal-700 text-lg mb-5">
+                  <FaUsers className="inline-block mr-2 text-teal-700" />
                   {classItem.enrollCount || 0}
                 </p>
                 <Link to={`/allclasses/${classItem._id}`}>
-                  <button className="w-full py-3 bg-blue-600 text-white text-lg font-bold rounded-lg hover:bg-blue-700 transition-colors">
+                  <button className="w-full py-3 bg-teal-600 text-white text-lg font-bold rounded-lg hover:bg-teal-800 transition-colors">
                     Enroll
                   </button>
                 </Link>
