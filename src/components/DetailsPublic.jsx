@@ -32,20 +32,21 @@ const DetailsPublic = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100"
+      className="my-10 flex flex-col items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-8"
+        className="w-full bg-teal-50 rounded-lg shadow-lg p-5"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-4xl font-bold text-center text-blue-600 mb-6">
+        <h3 className="text-4xl font-bold text-center text-teal-600 my-5">
           Class Details
         </h3>
+        <div className="flex items-center justify-center gap-10">
         {classData?.image && (
           <motion.div
             className="mb-6"
@@ -62,27 +63,27 @@ const DetailsPublic = () => {
         )}
         <div className="space-y-6">
           <motion.div
-            className="flex items-center bg-blue-50 p-4 rounded-lg shadow-md"
+            className="flex items-center bg-teal-100 p-4 rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
             <FaBook className="text-blue-600 text-2xl mr-4" />
             <div>
-              <h4 className="text-xl font-semibold text-blue-500">Title</h4>
+              <h4 className="text-xl font-semibold text-teal-600">Title</h4>
               <p className="text-lg">{classData?.title || "No Title"}</p>
             </div>
           </motion.div>
 
           <motion.div
-            className="flex items-center bg-green-50 p-4 rounded-lg shadow-md"
+            className="flex items-center bg-teal-100 p-4 rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <FaUser className="text-green-600 text-2xl mr-4" />
             <div>
-              <h4 className="text-xl font-semibold text-green-500">
+              <h4 className="text-xl font-semibold text-teal-600">
                 Instructor Name
               </h4>
               <p className="text-lg">{classData?.name || "No Name"}</p>
@@ -90,14 +91,14 @@ const DetailsPublic = () => {
           </motion.div>
 
           <motion.div
-            className="flex items-center bg-yellow-50 p-4 rounded-lg shadow-md"
+            className="flex items-center bg-teal-100 p-4 rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <FaEnvelope className="text-yellow-600 text-2xl mr-4" />
             <div>
-              <h4 className="text-xl font-semibold text-yellow-500">
+              <h4 className="text-xl font-semibold text-teal-600">
                 Instructor Email
               </h4>
               <p className="text-lg">{classData?.email || "No Email"}</p>
@@ -105,14 +106,14 @@ const DetailsPublic = () => {
           </motion.div>
 
           <motion.div
-            className="flex items-center bg-purple-50 p-4 rounded-lg shadow-md"
+            className="flex items-center bg-teal-100 p-4 rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <FaDollarSign className="text-purple-600 text-2xl mr-4" />
             <div>
-              <h4 className="text-xl font-semibold text-purple-500">Price</h4>
+              <h4 className="text-xl font-semibold text-teal-600">Price</h4>
               <p className="text-lg">
                 {classData?.price ? `$${classData.price}` : "No Price"}
               </p>
@@ -120,14 +121,14 @@ const DetailsPublic = () => {
           </motion.div>
 
           <motion.div
-            className="flex items-center bg-pink-50 p-4 rounded-lg shadow-md"
+            className="flex items-center bg-teal-100 p-4 rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <FaInfoCircle className="text-pink-600 text-2xl mr-4" />
             <div>
-              <h4 className="text-xl font-semibold text-pink-500">
+              <h4 className="text-xl font-semibold text-teal-600">
                 Description
               </h4>
               <p className="text-lg">
@@ -136,14 +137,15 @@ const DetailsPublic = () => {
             </div>
           </motion.div>
         </div>
+        </div>
 
         <Link
           state={{ classData }}
-          className="mt-8 flex justify-center"
+          className="my-5 flex justify-center"
           to={"/payment"}
         >
           <motion.button
-            className="w-full py-4 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white font-bold rounded-full shadow-lg text-lg hover:opacity-90 transform hover:scale-105 transition duration-300"
+            className="w-3/4 mx-auto py-3 bg-gradient-to-r from-teal-300 via-teal-500 to-teal-800 text-white text-lg font-bold rounded-lg hover:opacity-90 transform hover:scale-105 transition duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.98 }}
           >
