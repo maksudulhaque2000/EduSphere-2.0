@@ -58,7 +58,7 @@ const Insights = () => {
       />
       <div className="flex flex-col lg:flex-row items-center gap-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 flex-1 w-full">
-          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg shadow-lg">
+          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-teal-200 to-teal-600 rounded-lg shadow-lg">
             <div className="flex items-center space-x-4">
               <FaUsers className="text-4xl" />
               <div>
@@ -68,7 +68,7 @@ const Insights = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-pink-400 to-yellow-500 text-white rounded-lg shadow-lg">
+          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-teal-600 to-teal-200 text-white rounded-lg shadow-lg">
             <div className="flex items-center space-x-4">
               <FaChalkboardTeacher className="text-4xl" />
               <div>
@@ -78,7 +78,7 @@ const Insights = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-purple-400 to-indigo-600 text-white rounded-lg shadow-lg">
+          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-teal-200 to-teal-600 rounded-lg shadow-lg">
             <div className="flex items-center space-x-4">
               <FaUserGraduate className="text-4xl" />
               <div>

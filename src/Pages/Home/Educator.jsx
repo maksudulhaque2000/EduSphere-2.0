@@ -69,7 +69,7 @@ const Educator = () => {
 
                 <motion.a 
                     href="/teachon" 
-                    className="inline-block py-3 px-8 bg-teal-500 text-black font-semibold rounded-lg hover:bg-teal-800 transition duration-300"
+                    className="inline-block py-3 px-8 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-800 transition duration-300"
                     initial={{ opacity: 0 }} 
                     animate={{ opacity: 1 }} 
                     transition={{ duration: 0.8 }}

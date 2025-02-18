@@ -31,7 +31,7 @@ const Empower = () => {
             className="bg-white p-6 rounded-lg shadow-lg text-center"
             data-aos="fade-right"
           >
-            <FaRegEdit className="text-4xl text-indigo-600 mb-4" />
+            <FaRegEdit className="text-4xl text-teal-600 mb-4" />
             <h3 className="text-2xl font-semibold mb-2">
               Publish Your Courses
             </h3>
@@ -45,7 +45,7 @@ const Empower = () => {
             className="bg-white p-6 rounded-lg shadow-lg text-center"
             data-aos="fade-up"
           >
-            <FaChalkboardTeacher className="text-4xl text-green-600 mb-4" />
+            <FaChalkboardTeacher className="text-4xl text-teal-600 mb-4" />
             <h3 className="text-2xl font-semibold mb-2">Teach & Inspire</h3>
             <p className="text-gray-700">
               Become an educator and shape the future of students across the
@@ -57,7 +57,7 @@ const Empower = () => {
             className="bg-white p-6 rounded-lg shadow-lg text-center"
             data-aos="fade-left"
           >
-            <FaRegUser className="text-4xl text-blue-600 mb-4" />
+            <FaRegUser className="text-4xl text-teal-600 mb-4" />
             <h3 className="text-2xl font-semibold mb-2">
               Request to Become a Teacher
             </h3>
@@ -70,7 +70,7 @@ const Empower = () => {
             className="bg-white p-6 rounded-lg shadow-lg text-center"
             data-aos="fade-up"
           >
-            <FaGraduationCap className="text-4xl text-yellow-600 mb-4" />
+            <FaGraduationCap className="text-4xl text-teal-600 mb-4" />
             <h3 className="text-2xl font-semibold mb-2">Enroll in Courses</h3>
             <p className="text-gray-700">
               Students can explore and enroll in courses to enhance their
