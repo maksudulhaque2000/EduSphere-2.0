@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
@@ -133,7 +133,7 @@ const TeachOn = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="max-w-3xl mx-auto mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg">
+    <div className="max-w-3xl mx-auto mt-12 p-8 bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg shadow-lg">
       <h2 className="text-3xl font-extrabold text-gray-800 text-center mb-8">
         Apply for a Teaching Position
       </h2>
@@ -194,7 +194,7 @@ const TeachOn = () => {
           <select
             id="experience"
             {...register("experience")}
-            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
           >
             <option value="beginner">Beginner</option>
             <option value="mid-level">Mid-Level</option>
@@ -214,7 +214,7 @@ const TeachOn = () => {
             id="title"
             {...register("title")}
             placeholder="Enter a title"
-            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
           />
         </div>
 
@@ -228,7 +228,7 @@ const TeachOn = () => {
           <select
             id="category"
             {...register("category")}
-            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500"
           >
             <option value="web-development">Web Development</option>
             <option value="digital-marketing">Digital Marketing</option>
@@ -244,7 +244,7 @@ const TeachOn = () => {
           ) : (
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="w-full py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Submit for Review
             </button>
@@ -257,7 +257,7 @@ const TeachOn = () => {
           <button
             type="button"
             onClick={() => handleUpdate(matchingTeachOnRequests._id)}
-            className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="w-full py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Request to Another
           </button>

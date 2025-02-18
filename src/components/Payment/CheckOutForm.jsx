@@ -86,7 +86,7 @@ const CheckOutForm = ({ classData }) => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 rounded-lg shadow-lg p-8 max-w-lg mx-auto">
+    <div className="bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 rounded-lg shadow-lg p-8 max-w-lg mx-auto">
       <h2 className="text-2xl font-bold text-center text-purple-700 mb-4">
         Complete Your Payment
       </h2>
@@ -123,7 +123,7 @@ const CheckOutForm = ({ classData }) => {
         <button
           disabled={!stripe || !clientSecret}
           type="submit"
-          className="w-full py-2 text-white font-bold bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 rounded-md shadow-lg"
+          className="w-full py-2 text-white font-bold bg-gradient-to-r from-teal-600 to-teal-800 hover:from-teal-900 hover:to-teal-950 rounded-md shadow-lg"
         >
           Pay Now
         </button>
