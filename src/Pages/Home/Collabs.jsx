@@ -38,7 +38,6 @@ const Collabs = () => {
           delay: 2000,
           disableOnInteraction: false,
         }}
-        className="mb-24"
       >
         <SwiperSlide>
           <img className="w-full" src={slide1} alt="slide image" />

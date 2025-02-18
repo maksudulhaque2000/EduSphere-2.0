@@ -9,8 +9,9 @@ import Insights from "./Insights";
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <Banner></Banner>
+      <div className="px-4">
       <Collabs></Collabs>
       <Highlight></Highlight>
       <Feedback></Feedback>
@@ -18,6 +19,7 @@ const Home = () => {
       <Educator></Educator>
       <ImageGallery></ImageGallery>
       <Empower></Empower>
+      </div>
     </div>
   );
 };

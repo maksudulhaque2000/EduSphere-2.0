@@ -49,15 +49,15 @@ const Insights = () => {
     .reduce((total, cls) => total + cls.enrollCount, 0);
 
   return (
-    <div className="px-6 py-8">
+    <div>
       <SectionTitle
         subTitle={"Discover EduSphere in Numbers"}
         heading={
           "Take a glance at the impact of EduSphere! See the total users, classes created, and student enrollments all in one place. These numbers reflect the growing community of passionate learners and dedicated educators who make EduSphere thrive every day."
         }
       />
-      <div className="flex flex-col lg:flex-row items-center gap-8 mt-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 flex-1">
+      <div className="flex flex-col lg:flex-row items-center gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 flex-1 w-full">
           <div className="flex items-center justify-between p-6 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg shadow-lg">
             <div className="flex items-center space-x-4">
               <FaUsers className="text-4xl" />

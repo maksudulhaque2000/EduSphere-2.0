@@ -68,17 +68,17 @@ const Highlight = () => {
       >
         {classes.map((course) => (
           <SwiperSlide key={course._id}>
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mb-10">
               <img
                 src={course.image}
                 alt={course.name}
                 className="w-full h-48 object-cover rounded-t-lg"
               />
               <div className="p-5">
-                <h4 className="text-xl font-semibold text-teal-700">
-                  {course.name}
+                <h4 className="text-xl font-semibold text-teal-700 truncate">
+                  {course.title}
                 </h4>
-                <p className="text-gray-600 mt-2 text-sm line-clamp-2">
+                <p className="text-gray-600 mt-2 text-sm line-clamp-2 truncate">
                   {course.description}
                 </p>
                 <div className="mt-4">

@@ -10,7 +10,7 @@ const Educator = () => {
                 heading={"Share your knowledge, inspire curious minds, and make an impact with EduSphere. As a teacher, you can create your own courses, publish assignments, and connect with a diverse community of learners. Join us today and start shaping the future of education!"}
             />
             
-            <div className="container mx-auto text-center px-6">
+            <div className="text-center">
                 
 
                 <motion.div 
@@ -19,7 +19,7 @@ const Educator = () => {
                     animate={{ opacity: 1, scale: 1 }} 
                     transition={{ duration: 0.6 }}
                 >
-                    <FaChalkboardTeacher className="text-6xl text-yellow-400" />
+                    <FaChalkboardTeacher className="text-6xl text-teal-500" />
                 </motion.div>
 
                 <motion.div 
@@ -29,7 +29,7 @@ const Educator = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <p className="text-xl">Why Teach with Us?</p>
-                    <FaStar className="text-2xl text-yellow-400" />
+                    <FaStar className="text-2xl text-teal-500" />
                 </motion.div>
 
                 <motion.div 
@@ -69,7 +69,7 @@ const Educator = () => {
 
                 <motion.a 
                     href="/teachon" 
-                    className="inline-block py-3 px-8 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition duration-300"
+                    className="inline-block py-3 px-8 bg-teal-500 text-black font-semibold rounded-lg hover:bg-teal-800 transition duration-300"
                     initial={{ opacity: 0 }} 
                     animate={{ opacity: 1 }} 
                     transition={{ duration: 0.8 }}

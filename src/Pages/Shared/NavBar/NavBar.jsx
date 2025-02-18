@@ -55,7 +55,7 @@ const NavBar = () => {
   const dropdownLinks = (
     <>
       {user && user.email ? (
-        <p className="text-center">{user.displayName}</p>
+        <p className="text-center hidden">{user.displayName}</p>
       ) : (
         <p className="text-center">Guest</p>
       )}
@@ -100,7 +100,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 lg:px-10 justify-between">
+    <div className="navbar sticky top-0 z-50 px-5 lg:px-10 justify-between bg-gradient-to-r from-teal-100 to-teal-200 shadow-md">
       <div className="flex items-center">
         <Link
           to="/"
@@ -108,7 +108,7 @@ const NavBar = () => {
         >
           <SiSemanticscholar /> EduSphere
         </Link>
-        <div className="lg:hidden ml-4">
+        {/* <div className="lg:hidden ml-4">
           <button className="text-2xl m-2 z-50" onClick={handleDropdownToggle}>
             <MdMenu />
           </button>
@@ -117,7 +117,7 @@ const NavBar = () => {
               {mainLinks}
             </ul>
           )}
-        </div>
+        </div> */}
       </div>
 
       <div
@@ -159,6 +159,24 @@ const NavBar = () => {
               tabIndex={0}
               className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
             >
+              <li className="text-gray-700 font-bold lg:hidden">
+                <NavLink to="/">
+                  <FaHome />
+                  Home
+                </NavLink>
+              </li>
+              <li className="text-gray-700 font-bold lg:hidden">
+                <NavLink to="/allclasses">
+                  <MdOutlineClass />
+                  All Classes
+                </NavLink>
+              </li>
+              <li className="text-gray-700 font-bold lg:hidden">
+                <NavLink to="/teachon">
+                  <FaChalkboardTeacher />
+                  Teach on EduSphere
+                </NavLink>
+              </li>
               {dropdownLinks}
             </ul>
           </div>

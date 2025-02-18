@@ -12,15 +12,14 @@ const ImageGallery = () => {
   }, []);
 
   return (
-    <div className="py-16 pt-2 bg-gray-100 my-10">
+    <div>
       <SectionTitle
         subTitle={"Our Inspiring Moments"}
         heading={
           "Browse through these captivating images that highlight the core of our community’s journey. From impactful courses to inspiring learners and educators, these visuals reflect the essence of growth, learning, and collaboration at EduSphere. Explore the journey, and let these moments inspire your next step!"
         }
       />
-      <div className="container mx-auto px-6 text-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative" data-aos="zoom-in" data-aos-delay="300">
             <img
               src="https://i.ibb.co.com/fCHHb6N/images.jpg"
@@ -75,7 +74,6 @@ const ImageGallery = () => {
             <div className="absolute inset-0 bg-black opacity-25 rounded-lg"></div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

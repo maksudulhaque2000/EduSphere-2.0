@@ -7,6 +7,7 @@ import img3 from "../../assets/images/home/3.png";
 import img4 from "../../assets/images/home/12.jpg";
 import img5 from "../../assets/images/home/5.jpg";
 import img6 from "../../assets/images/home/6.jpg";
+import SectionTitle from "../../components/SectionTitle";
 
 const Banner = () => {
   return (

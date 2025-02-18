@@ -30,12 +30,12 @@ const Feedback = () => {
   }
 
   return (
-    <div className="my-24">
+    <div>
       <SectionTitle
         subTitle={"---What Our Clients Say---"}
         heading={"TESTIMONIALS"}
       />
-      <div className="container mx-auto px-4">
+      <div>
         <Swiper
           navigation={true}
           modules={[Navigation]}
@@ -50,7 +50,7 @@ const Feedback = () => {
         >
           {feedbackData.map((feedback) => (
             <SwiperSlide key={feedback._id}>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 my-2">
                 <div className="flex items-center gap-4">
                   <img
                     src={feedback.FeedbackGiverImage}
@@ -70,7 +70,7 @@ const Feedback = () => {
                   <h4 className="text-md font-medium text-gray-800">
                     {feedback.title}
                   </h4>
-                  <p className="text-gray-600 mt-2">{feedback.description}</p>
+                  <p className="text-gray-600 mt-2 truncate">{feedback.description}</p>
                 </div>
                 <div className="mt-4 flex items-center justify-between">
                   <ReactStars
