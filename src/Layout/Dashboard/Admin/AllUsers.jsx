@@ -92,14 +92,14 @@ const AllUsers = () => {
   };
 
   return (
-    <div className="p-5 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen">
+    <div className="p-5 bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 min-h-screen">
       <Helmet>
         <meta charSet="utf-8" />
         <title>EduSphere | All Users</title>
       </Helmet>
       <div className="flex justify-between items-center my-4">
-        <h3 className="text-2xl font-bold text-purple-700">All Users</h3>
-        <h3 className="text-xl font-bold text-blue-600">
+        <h3 className="text-2xl font-bold text-teal-800">All Users</h3>
+        <h3 className="text-xl font-bold text-teal-800">
           Total Users: {users.length}
         </h3>
       </div>
@@ -111,7 +111,7 @@ const AllUsers = () => {
           transition={{ duration: 1 }}
         >
           <thead>
-            <tr className="bg-gradient-to-r from-purple-400 to-blue-500 text-white">
+            <tr className="bg-gradient-to-r from-teal-200 to-teal-400">
               <th className="border border-gray-300 px-4 py-2">Photo</th>
               <th className="border border-gray-300 px-4 py-2">Name</th>
               <th className="border border-gray-300 px-4 py-2">Email</th>
@@ -171,14 +171,14 @@ const AllUsers = () => {
         <motion.button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className={`flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded shadow-md hover:bg-purple-600 transition-all duration-300 ease-in-out ${
+          className={`flex items-center gap-2 bg-teal-600 text-white px-4 py-2 rounded shadow-md hover:bg-teal-800 transition-all duration-300 ease-in-out ${
             currentPage === 1 && "opacity-50 cursor-not-allowed"
           }`}
         >
           <FaArrowLeft /> Previous
         </motion.button>
         <div className="flex items-center gap-2">
-          <label htmlFor="usersPerPage" className="font-semibold text-blue-600">
+          <label htmlFor="usersPerPage" className="font-semibold text-teal-800">
             Users per page:
           </label>
           <select
@@ -193,7 +193,7 @@ const AllUsers = () => {
             <option value={20}>20</option>
           </select>
         </div>
-        <span className="self-center text-blue-700 font-semibold">
+        <span className="self-center text-teal-800 font-semibold">
           Page {currentPage} of {totalPages}
         </span>
         <motion.button
@@ -201,7 +201,7 @@ const AllUsers = () => {
             setCurrentPage((prev) => Math.min(prev + 1, totalPages))
           }
           disabled={currentPage === totalPages}
-          className={`flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded shadow-md hover:bg-purple-600 transition-all duration-300 ease-in-out ${
+          className={`flex items-center gap-2 bg-teal-600 text-white px-4 py-2 rounded shadow-md hover:bg-teal-800 transition-all duration-300 ease-in-out ${
             currentPage === totalPages && "opacity-50 cursor-not-allowed"
           }`}
         >

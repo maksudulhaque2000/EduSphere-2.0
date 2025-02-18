@@ -97,7 +97,7 @@ const TeacherRequest = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       <Helmet>
         <meta charSet="utf-8" />
         <title>EduSphere | Teachers Request</title>

@@ -130,7 +130,7 @@ const MyEnrollClassDetails = () => {
   }
 
   return (
-    <div className="p-6 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 min-h-screen">
+    <div className="p-6 bg-gradient-to-r from-teal-50 via-teal-100 to-teal-200 min-h-screen">
       <Helmet>
         <meta charSet="utf-8" />
         <title>EduSphere | Enrolled Classes Details</title>
@@ -142,7 +142,7 @@ const MyEnrollClassDetails = () => {
         <div className="bg-white shadow-lg rounded-lg p-4 max-w-3xl mx-auto">
           <button
             onClick={() => setIsFeedbackModalOpen(true)}
-            className="bg-indigo-600 text-white hover:bg-indigo-700 font-semibold mb-10 py-2 px-4 rounded transition duration-300"
+            className="bg-teal-600 text-white hover:bg-teal-800 font-semibold mb-10 py-2 px-4 rounded-lg transition duration-300"
           >
             Teaching Evaluation Report (TER)
           </button>
@@ -207,7 +207,7 @@ const MyEnrollClassDetails = () => {
           </div>
         </div>
       ) : (
-        <h3 className="text-4xl text-center my-10 text-yellow-600">
+        <h3 className="text-4xl text-center my-10 text-teal-600">
           Currently, there are no assignments included in this course.
         </h3>
       )}
@@ -250,7 +250,7 @@ const MyEnrollClassDetails = () => {
             </div>
             <button
               onClick={handleFeedbackSubmit}
-              className="bg-indigo-600 text-white hover:bg-indigo-700 w-full mt-4 py-2 rounded-md"
+              className="bg-teal-600 text-white hover:bg-teal-800 w-full mt-4 py-2 rounded-lg"
             >
               Send Feedback
             </button>

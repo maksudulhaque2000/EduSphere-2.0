@@ -8,6 +8,7 @@ import { CgProfile } from "react-icons/cg";
 import { Helmet } from "react-helmet";
 import Loading from "../../components/Loading";
 import useAuth from "../../hooks/useAuth";
+import NavBarD from "../../Pages/Shared/NavBar/NavBarD";
 
 const Dashboard = () => {
   // const [isAdmin, isAdminLoading] = useAdmin();
@@ -16,7 +17,7 @@ const Dashboard = () => {
   const { user } = useAuth();
 
   const isAdmin = false;
-  const isTeacher = true;
+  const isTeacher = false;
 
   // if (isAdminLoading || isTeacherLoading) {
   //   return <Loading />;
@@ -126,18 +127,6 @@ const Dashboard = () => {
                   <MdOutlineClass /> All classes
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    `flex items-center gap-2 px-3 py-2 rounded-md ${
-                      isActive ? "bg-gray-700 text-white" : ""
-                    }`
-                  }
-                  to={"/dashboard/adminprofile"}
-                >
-                  <CgProfile /> Admin Profile
-                </NavLink>
-              </li>
             </div>
           ) : isTeacher ? (
             <div className="flex flex-col gap-4 text-sm lg:text-xl">
@@ -184,18 +173,6 @@ const Dashboard = () => {
                   <CgProfile /> My Class
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    `flex items-center gap-2 px-3 py-2 rounded-md ${
-                      isActive ? "bg-gray-700 text-white" : ""
-                    }`
-                  }
-                  to={"/dashboard/teacherprofile"}
-                >
-                  <CgProfile /> Teacher Profile
-                </NavLink>
-              </li>
             </div>
           ) : (
             <div className="flex flex-col gap-4 text-sm lg:text-xl">
@@ -230,23 +207,12 @@ const Dashboard = () => {
                   <SiGoogleclassroom /> My enroll class
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    `flex items-center gap-2 px-3 py-2 rounded-md ${
-                      isActive ? "bg-gray-700 text-white" : ""
-                    }`
-                  }
-                  to={"/dashboard/studentprofile"}
-                >
-                  <CgProfile /> Student Profile
-                </NavLink>
-              </li>
             </div>
           )}
         </ul>
       </div>
       <div className="w-3/4 lg:w-10/12">
+      <NavBarD></NavBarD>
         <Outlet></Outlet>
       </div>
     </div>

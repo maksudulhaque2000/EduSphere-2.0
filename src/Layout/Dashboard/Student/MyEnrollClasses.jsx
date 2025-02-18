@@ -57,10 +57,10 @@ const MyEnrollClasses = () => {
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
+              <h4 className="text-lg font-semibold text-gray-800 mb-2 truncate">
                 {classData.title}
               </h4>
-              <p className="text-gray-600 mb-4">{classData.description}</p>
+              <p className="text-gray-600 mb-4 truncate">{classData.description}</p>
               <div className="flex items-center justify-between text-gray-600 text-sm mb-4">
                 <span className="flex items-center">
                   <FaUserTie className="text-blue-500 mr-2" />
@@ -86,7 +86,7 @@ const MyEnrollClasses = () => {
             </div>
             <div className="bg-gray-100 p-2 text-center">
               <span className="text-xs text-gray-500">Transaction ID:</span>
-              <p className="text-sm text-gray-700 font-medium">
+              <p className="text-sm text-gray-700 font-medium truncate">
                 {classData.tranSaction}
               </p>
             </div>
