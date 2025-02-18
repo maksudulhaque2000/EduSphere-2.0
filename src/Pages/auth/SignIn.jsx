@@ -146,7 +146,7 @@ const SignIn = () => {
               />
             </div>
             <div className="text-right">
-              <a href="#" className="text-sm text-blue-500 hover:underline">
+              <a href="#" className="text-sm text-teal-600 hover:underline">
                 Forgot Password?
               </a>
             </div>
@@ -170,7 +170,7 @@ const SignIn = () => {
               <button
                 type="button"
                 onClick={handleCaptchaCheck}
-                className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md"
+                className="mt-4 px-6 py-2 bg-teal-600 hover:bg-teal-800 text-white rounded-md"
                 disabled={isCaptchaChecked}
               >
                 {isCaptchaChecked ? "Captcha Validated" : "Check Captcha"}
@@ -184,7 +184,7 @@ const SignIn = () => {
                 className={`w-full py-3 mt-4 font-semibold rounded-md transition-colors duration-300 
                                 ${
                                   captchaValid
-                                    ? "bg-blue-500 text-white hover:bg-blue-600"
+                                    ? "bg-teal-600 text-white hover:bg-teal-800"
                                     : "bg-gray-400 text-gray-700 cursor-not-allowed"
                                 }`}
                 disabled={!captchaValid}
@@ -200,7 +200,7 @@ const SignIn = () => {
               New here?{" "}
               <Link
                 to={"/auth/signup"}
-                className="text-blue-500 hover:underline"
+                className="text-teal-600 hover:underline"
               >
                 Create a New Account
               </Link>

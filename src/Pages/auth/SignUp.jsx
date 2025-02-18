@@ -116,7 +116,7 @@ const SignUp = () => {
 
   return (
     <div
-      className="flex items-center justify-center h-screen"
+      className="flex items-center justify-center"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -125,7 +125,7 @@ const SignUp = () => {
       }}
     >
       <div
-        className="bg-white rounded-lg shadow-2xl w-[900px] flex overflow-hidden mt-20"
+        className="bg-white rounded-lg shadow-2xl w-[900px] flex overflow-hidden my-5"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
@@ -144,7 +144,7 @@ const SignUp = () => {
                 type="text"
                 placeholder="Type here"
                 {...register("name")}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -156,7 +156,7 @@ const SignUp = () => {
                 type="text"
                 placeholder="Photo URL"
                 {...register("photoURL")}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -168,7 +168,7 @@ const SignUp = () => {
                 type="text"
                 placeholder="Enter your Phone number"
                 {...register("phoneNumber")}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -180,7 +180,7 @@ const SignUp = () => {
                 type="email"
                 placeholder="Type here"
                 {...register("email")}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -192,7 +192,7 @@ const SignUp = () => {
                 type="password"
                 placeholder="Enter your password"
                 {...register("password")}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -206,7 +206,7 @@ const SignUp = () => {
                 id="captchaInput"
                 placeholder="Enter captcha"
                 onBlur={handleCaptchaChange}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
             </div>
@@ -214,7 +214,7 @@ const SignUp = () => {
               <button
                 type="button"
                 onClick={handleReloadCaptcha}
-                className={`w-full bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition ${
+                className={`w-full bg-teal-600 text-white py-2 px-4 rounded-lg hover:bg-teal-800 transition ${
                   captchaValid ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 disabled={captchaValid}
@@ -235,7 +235,7 @@ const SignUp = () => {
             </div>
             <button
               type="submit"
-              className={`w-full bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition ${
+              className={`w-full bg-teal-600 text-white py-2 px-4 rounded-lg hover:bg-teal-800 transition ${
                 captchaValid ? "" : "cursor-not-allowed opacity-50"
               }`}
               disabled={!captchaValid}
@@ -251,14 +251,14 @@ const SignUp = () => {
             Already registered?{" "}
             <Link
               to={"/auth/signin"}
-              className="text-yellow-500 font-medium hover:underline"
+              className="text-teal-600 font-medium hover:underline"
             >
               Go to log in
             </Link>
           </p>
         </div>
 
-        <div className="w-1/2 bg-yellow-50 flex items-center justify-center">
+        <div className="w-1/2 bg-teal-50 flex items-center justify-center">
           <img
             src={watch("photoURL") || bg}
             alt="Sign Up Illustration"

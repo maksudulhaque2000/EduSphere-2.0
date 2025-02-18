@@ -44,7 +44,7 @@ const AdminProfile = () => {
       <div className="w-full sm:w-3/4 md:max-w-2xl bg-white rounded-lg shadow-2xl p-8">
         {currentUser ? (
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-teal-700 uppercase">
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-teal-600 uppercase">
               {currentUser.role === "rejected"
                 ? "Teacher Profile"
                 : `${currentUser.role} Profile`}
@@ -61,28 +61,28 @@ const AdminProfile = () => {
                 {currentUser.name || "N/A"}
               </h2>
             </div>
-            <div className="flex justify-between px-10 flex-wrap">
+            <div className="flex flex-col lg:flex-row gap-2 justify-between px-10 flex-wrap">
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-2xl text-teal-600" />
-                <p className="text-lg text-gray-600">{currentUser.email}</p>
+                <p className="text-xs lg:text-lg text-gray-600">{currentUser.email}</p>
               </div>
               <div className="flex items-center gap-4">
                 <FaPhone className="text-2xl text-teal-600" />
-                <p className="text-lg text-gray-600">
+                <p className="text-xs lg:text-lg text-gray-600">
                   {currentUser.phone || "N/A"}
                 </p>
               </div>
             </div>
-            <div className="flex justify-between px-10 flex-wrap">
+            <div className="flex flex-col lg:flex-row gap-2 justify-between px-10 flex-wrap">
               <div className="flex items-center gap-4">
               <FaUserTag className="text-2xl text-teal-600" />
-              <p className="text-lg text-gray-600 capitalize">
+              <p className="text-xs lg:text-lg text-gray-600 capitalize">
                 {currentUser.role || "N/A"}
               </p>
               </div>
               <div className="flex items-center gap-4">
               <FaLocationArrow className="text-2xl text-teal-600" />
-              <p className="text-lg text-gray-600 capitalize">
+              <p className="text-xs lg:text-lg text-gray-600 capitalize">
                 {currentUser.adress|| "N/A"}
               </p>
               </div>

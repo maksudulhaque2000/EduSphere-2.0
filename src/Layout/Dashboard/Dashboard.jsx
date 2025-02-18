@@ -11,17 +11,17 @@ import useAuth from "../../hooks/useAuth";
 import NavBarD from "../../Pages/Shared/NavBar/NavBarD";
 
 const Dashboard = () => {
-  // const [isAdmin, isAdminLoading] = useAdmin();
-  // const [isTeacher, isTeacherLoading] = useTeacher();
+  const [isAdmin, isAdminLoading] = useAdmin();
+  const [isTeacher, isTeacherLoading] = useTeacher();
 
   const { user } = useAuth();
 
-  const isAdmin = false;
-  const isTeacher = false;
+  // const isAdmin = true;
+  // const isTeacher = false;
 
-  // if (isAdminLoading || isTeacherLoading) {
-  //   return <Loading />;
-  // }
+  if (isAdminLoading || isTeacherLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="flex px-4">
@@ -211,7 +211,7 @@ const Dashboard = () => {
           )}
         </ul>
       </div>
-      <div className="w-3/4 lg:w-10/12">
+      <div className="w-3/4 lg:w-10/12 border-l-2">
       <NavBarD></NavBarD>
         <Outlet></Outlet>
       </div>

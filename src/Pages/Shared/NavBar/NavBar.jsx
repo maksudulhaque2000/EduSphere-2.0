@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaHome, FaUserCircle, FaChalkboardTeacher } from "react-icons/fa";
-import { MdOutlineClass, MdMenu } from "react-icons/md";
+import { MdOutlineClass } from "react-icons/md";
 import ThemeToggleButton from "../../../components/ThemeToggleButton";
 import { useContext, useState } from "react";
 import { SiSemanticscholar } from "react-icons/si";
@@ -27,7 +27,7 @@ const NavBar = () => {
       text: "You will be logged out!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#00897B",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, log me out!",
       cancelButtonText: "Cancel",
@@ -108,16 +108,6 @@ const NavBar = () => {
         >
           <SiSemanticscholar /> EduSphere
         </Link>
-        {/* <div className="lg:hidden ml-4">
-          <button className="text-2xl m-2 z-50" onClick={handleDropdownToggle}>
-            <MdMenu />
-          </button>
-          {isDropdownOpen && (
-            <ul className="menu menu-vertical p-2 shadow bg-base-100 rounded-box mt-2 w-52">
-              {mainLinks}
-            </ul>
-          )}
-        </div> */}
       </div>
 
       <div
@@ -183,7 +173,7 @@ const NavBar = () => {
         ) : (
           <div className="flex flex-col lg:flex-row gap-2">
             <Link
-              className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded"
+              className="bg-teal-800 text-white p-1 lg:p-2 text-center rounded"
               to="/auth/signin"
             >
               Sign In

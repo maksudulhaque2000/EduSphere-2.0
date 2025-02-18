@@ -24,7 +24,7 @@ const SocialGoogle = () => {
     <div>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-gray-500 w-full font-bold rounded-lg flex items-center justify-center"
+        className="bg-teal-600 hover:bg-teal-800 w-full font-bold rounded-lg flex items-center justify-center"
       >
         <img
           className="w-10"
