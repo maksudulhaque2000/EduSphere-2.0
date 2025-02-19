@@ -52,7 +52,10 @@ const NavBarD = () => {
           <>
             <div className="hidden lg:flex items-center gap-2">
               <img src={user.photoURL} alt={user.displayName} className='w-10' />
+              <div className='flex flex-col'>
               <span className="text-sm">{user.displayName}</span>
+              <span className="text-sm">{user.metadata.creationTime}</span>
+              </div>
             </div>
             <button
               onClick={handleLogout}

@@ -22,6 +22,7 @@ import MyEnrollClassDetails from "../Layout/Dashboard/Student/MyEnrollClassDetai
 import Error from "../Pages/Shared/Error/Error";
 import DefaultDashboard from "../Layout/Dashboard/DefaultDashboard";
 import AdminRouter from "./AdminRouter";
+import Blog from "../Pages/Blog/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "/allclasses",
         element: <AllClasses></AllClasses>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "/allclasses/:id",

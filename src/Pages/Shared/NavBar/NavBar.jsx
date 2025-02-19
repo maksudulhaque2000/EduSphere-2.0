@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaHome, FaUserCircle, FaChalkboardTeacher } from "react-icons/fa";
+import { FaHome, FaUserCircle, FaChalkboardTeacher, FaBlog } from "react-icons/fa";
 import { MdOutlineClass } from "react-icons/md";
 import ThemeToggleButton from "../../../components/ThemeToggleButton";
 import { useContext, useState } from "react";
@@ -63,6 +63,12 @@ const NavBar = () => {
         <NavLink to="/dashboard">
           <FaChalkboardTeacher />
           Dashboard
+        </NavLink>
+      </li>
+      <li className="text-gray-700 font-bold">
+        <NavLink to="/blog">
+          <FaBlog />
+          Blog
         </NavLink>
       </li>
       <li className="text-gray-700 font-bold">

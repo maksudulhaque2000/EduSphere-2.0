@@ -34,6 +34,8 @@ const AdminProfile = () => {
   }
 
   const currentUser = users.find((u) => u.email === user.email);
+  console.log(user);
+  
 
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-teal-50 via-teal-100 to-teal-200">
@@ -69,7 +71,7 @@ const AdminProfile = () => {
               <div className="flex items-center gap-4">
                 <FaPhone className="text-2xl text-teal-600" />
                 <p className="text-xs lg:text-lg text-gray-600">
-                  {currentUser.phone || "N/A"}
+                  {currentUser.phone || user.phoneNumber || "N/A"}
                 </p>
               </div>
             </div>
