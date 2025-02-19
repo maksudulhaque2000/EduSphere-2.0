@@ -6,7 +6,7 @@ EduSphere is a comprehensive MERN stack-based educational platform that connects
 
 ## 🌐 Live Site
 
-[EduSphere Platform](https://edusphere-521cf.web.app/)
+[EduSphere Platform](https://edusphere-v2.web.app/)
 
 ## ⚙️ Admin Credentials
 
