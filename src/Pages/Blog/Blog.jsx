@@ -145,7 +145,7 @@ const Blog = () => {
   const [selectedPost, setSelectedPost] = useState(null);
 
   return (
-    <div className="bg-teal-50 min-h-screen py-12 px-6 md:px-16">
+    <div className="py-12">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
