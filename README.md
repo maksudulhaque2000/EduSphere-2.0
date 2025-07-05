@@ -1,5 +1,9 @@
 # EduSphere - Educational Platform Client
 
+<div align="center">
+  <img src="https://i.ibb.co/FbTc2bwH/preview.png" height="400" width="800" alt="EduSphere"/>
+</div>
+
 ## 🎓 About
 
 EduSphere is a comprehensive MERN stack-based educational platform that connects students with expert teachers, facilitating seamless learning experiences through structured courses and interactive features.
