@@ -56,6 +56,31 @@ This repository contains the frontend application built with React + Vite. It co
 
 ## Live Platform and Developer Profiles
 
+## Demo Credentials
+ 
+Use the following test accounts to explore the platform without registering:
+ 
+### 👤 Student (User)
+ 
+| Field    | Value              |
+|----------|--------------------|
+| Email    | user@gmail.com     |
+| Password | Password@123       |
+ 
+### 🧑‍🏫 Teacher
+ 
+| Field    | Value              |
+|----------|--------------------|
+| Email    | tahmi@gmail.com    |
+| Password | Maha!1             |
+ 
+### 🛡️ Admin
+ 
+| Field    | Value                  |
+|----------|------------------------|
+| Email    | admin@edusphere.com    |
+| Password | adminEdusphere!0       |
+
 ### Developer Links
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Now-111827?logo=googlechrome&logoColor=white)](https://maksudul-haque.vercel.app/)
