@@ -33,6 +33,24 @@ const SignIn = () => {
 
   const from = location.state?.from?.pathname || "/";
 
+  const presetLogins = [
+    {
+      label: "Student Demo",
+      email: "user@gmail.com",
+      password: "Password@123",
+    },
+    {
+      label: "Teacher Demo",
+      email: "tahmi@gmail.com",
+      password: "Maha!1",
+    },
+    {
+      label: "Admin Demo",
+      email: "admin@edusphere.com",
+      password: "adminEdusphere!0",
+    },
+  ];
+
   const validatePassword = (password) => {
     const passwordRegex =
       /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
@@ -53,6 +71,19 @@ const SignIn = () => {
       loadCaptchaEnginge(6);
       setValue("isCaptchaChecked", false);
     }
+  };
+
+  const handlePresetLogin = ({ email, password }) => {
+    setValue("email", email, {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: true,
+    });
+    setValue("password", password, {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: true,
+    });
   };
 
   const onSubmit = (data) => {
@@ -120,6 +151,21 @@ const SignIn = () => {
 
         <div className="w-1/2 p-8">
           <h2 className="text-2xl font-bold text-center mb-6">Sign In</h2>
+          <div className="grid grid-cols-1 gap-3 mb-6 sm:grid-cols-3">
+            {presetLogins.map((preset) => (
+              <button
+                key={preset.email}
+                type="button"
+                onClick={() => handlePresetLogin(preset)}
+                className="w-full min-w-0 rounded-md border border-teal-600 bg-teal-50 px-3 py-2 text-left text-sm font-semibold text-teal-800 transition hover:bg-teal-100"
+              >
+                <span className="block">{preset.label}</span>
+                <span className="block break-all text-xs font-normal leading-tight text-teal-700">
+                  {preset.email}
+                </span>
+              </button>
+            ))}
+          </div>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="flex flex-col">
               <label htmlFor="email" className="text-sm font-semibold">
